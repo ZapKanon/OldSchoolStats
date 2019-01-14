@@ -1,0 +1,297 @@
+body{
+    
+    color: yellow;
+    background-color: black;
+}
+
+*{
+    font-family:verdana,tahoma,sans-serif;   
+}
+
+header{
+    background-image: url(../images/Logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 20%;
+    height:200px;
+    margin: auto;
+}
+
+/* Link is hidden unitl there is a valid search term entered */
+a{
+    visibility: hidden;
+    color: red;
+}
+
+a:hover{
+    color: orange;
+}
+
+
+a:active{
+    color: yellow;
+}
+
+a:visited{
+    color: greenyellow;
+}
+
+button{
+  display : inline-block;
+  cursor : pointer;
+
+  border-style : solid;
+  border-width : 1px;
+  border-radius : 10px;
+  padding : 10px 18px;
+  box-shadow : 0 1px 4px rgba(0,0,0,.6);
+  font-size : 9.5pt;
+  font-weight : bold;
+  color : #fff;
+  font-family : sans-serif;
+  text-decoration : none;
+}
+
+button.red{
+    border-color: #575E4D;
+    background: #4B3535;
+}
+
+button:hover{
+    background: #C2B4A0;
+}
+
+button:active{
+    background: #C3B4C0;
+    box-shadow : 0 0 6px rgba(0,0,0,.6);
+}
+
+/* Text is only visible when searching or an erro occurs */
+h2{
+    margin-left: 400px;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
+h4{
+    margin-top: -5px;
+
+}
+
+button:focus {outline:0;}
+
+.widgets{
+    margin-top: 1em;
+    margin-bottom:1em;
+}
+
+#search
+{
+    float: left;
+    margin-top: -225px;
+    margin-left: 400px;
+}
+
+/* Graph is hidden until a valid search is performed */
+.graph {
+  display: flex;
+  flex-wrap: nowrap;
+    visibility: hidden;
+}
+
+.graph > div {
+    background-color: #f1f1f1;
+  width: 75px;
+  margin: 5px;
+  text-align: center;
+  font-size: 13px;
+  min-height: 545px;   
+}
+
+.legend {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.legend > div {
+  background-color: #f1f1f1;
+  width: 75px;
+  margin: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  color: black; 
+}
+
+/* Shrink font sizes and move elements to stay onscreen at smaller sizes */
+@media only screen and (max-width: 1000px) {
+    .graph > div, .legend > div, .widgets
+    {
+        font-size: 10px;
+    }
+    
+    h2
+    {
+        font-size: 14px;  
+        margin-left: 200px;
+    }
+    
+    #search
+    {
+        margin-top: -150px;
+        margin-left: 150px;
+    }
+}
+
+/* Hide the legend at very small screen sizes, since it stops lining up well with the graph above it */
+@media only screen and (max-width: 750px) {
+    .legend
+    {
+        visibility: hidden;
+    }
+}
+
+/* Each column has its own unique color, even if a few look similar...*/
+/* They also have unique images relating to their names*/
+.column{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Atk
+{
+    background-color: #571109;
+    background-image: url(../images/Atk.png);   
+}
+
+#Def
+{
+    background-color: #5C6DA2;
+    background-image: url(../images/Def.png);
+}
+
+#Str
+{
+    background-color: #0E744C;
+    background-image: url(../images/Str.png);
+}
+
+#HP
+{
+    background-color: #C5C4BF;
+    background-image: url(../images/HP.png);
+}
+
+#Rng
+{
+    background-color: #5E741F;
+    background-image: url(../images/Rng.png);
+}
+
+#Pray
+{
+    background-color: #E0DCDB;
+    background-image: url(../images/Pray.png);
+}
+
+#Mag
+{
+    background-color: #A19481;
+    background-image: url(../images/Mag.png);
+}
+
+#Cook
+{
+    background-color: #582365;
+    background-image: url(../images/Cook.png);
+}
+
+#WC
+{
+    background-color: #967C43;
+    background-image: url(../images/WC.png);
+}
+
+#Flch
+{
+    background-color: #094448;
+    background-image: url(../images/Flch.png);
+}
+
+#Fish
+{
+    background-color: #7C99BB;
+    background-image: url(../images/Fish.png);
+}
+
+#Fire
+{
+    background-color: #D06E17;
+    background-image: url(../images/Fire.png);
+}
+
+#Crft
+{
+    background-color: #836446;
+    background-image: url(../images/Crft.png);
+}
+
+#Smth
+{
+    background-color: #575644;
+    background-image: url(../images/Smth.png);
+}
+
+#Mine
+{
+    background-color: #535444;
+    background-image: url(../images/Mine.png);
+}
+
+#Herb
+{
+    background-color: #0E7212;
+    background-image: url(../images/Herb.png);
+}
+
+#Agil
+{
+    background-color: #25286D;
+    background-image: url(../images/Agil.png);
+}
+
+#Thv
+{
+    background-color: #784566;
+    background-image: url(../images/Thv.png);
+}
+
+#Slay
+{
+    background-color: #232122;
+    background-image: url(../images/Slay.png);
+}
+
+#Farm
+{
+    background-color: #2D5D2D;
+    background-image: url(../images/Farm.png);
+}
+
+#RC
+{
+    background-color: #B1B1A5;
+    background-image: url(../images/RC.png);
+}
+
+#Hunt
+{
+    background-color: #6B6448;
+    background-image: url(../images/Hunt.png);
+}
+
+#Con
+{
+    background-color: #9F927F;
+    background-image: url(../images/Cons.png);
+}

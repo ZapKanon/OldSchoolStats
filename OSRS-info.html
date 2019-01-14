@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<title>OSRS Skill Visualization</title>
+    
+    <!-- Set up CSS and JavaScript. Main JS is called later to avoid null reference exceptions -->
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+</head>
+<body>
+    <header>
+
+    <!-- Header includes search bar, two sets of radio buttons, a hidden link, and the search button -->
+    <div class="widgets">
+        Enter Character Name:
+        <input id="searchterm" type="text" size="20" maxlength="20" autofocus value="zezima"/>
+    </div>
+
+    <div class="widgets">
+        <a href="url">View Official Hiscores Page</a>
+    </div>
+
+    <div class="widgets">
+        <input type="radio" id = levelButton name = scale value="level" checked="checked"> Show Skill Levels<br>
+        <input type="radio" id = xp99Button name = scale value="xp99"> Show XP scaled to Level 99<br>
+        <input type="radio" id = xp200mButton name = scale value="xp200m"> Show XP scaled to 200m (why)<br>
+    </div>
+
+    <div class="widgets">
+        <input type="radio" id = defaultButton name = sort value="default" checked="checked"> Sort Skills in Default Order<br>
+        <input type="radio" id = alphabeticalButton name = sort value="alphabetical"> Sort Skills in Alphabetical Order<br>
+        <input type="radio" id = highToLowButton name = sort value="highToLow"> Sort Skills from Highest to Lowest XP<br> 
+    </div>
+
+    <div class="widgets">
+    <button type="button" id="search" class="red">Search</button>
+    </div>
+
+    <h2>Searching for player...</h2>
+
+    </header>
+
+    <hr> 
+    <!-- Content is made up of the graph and the legend below it -->
+    <section id = content>
+
+        <div class="graph">
+            <div class = column id = Atk></div>
+            <div class = column id = Def></div>
+            <div class = column id = Str></div>
+            <div class = column id = HP></div>
+            <div class = column id = Rng></div>
+            <div class = column id = Pray></div>
+            <div class = column id = Mag></div>
+            <div class = column id = Cook></div>
+            <div class = column id = WC></div>
+            <div class = column id = Flch></div>
+            <div class = column id = Fish></div>
+            <div class = column id = Fire></div>
+            <div class = column id = Crft></div>
+            <div class = column id = Smth></div>
+            <div class = column id = Mine></div>
+            <div class = column id = Herb></div>
+            <div class = column id = Agil></div>
+            <div class = column id = Thv></div>
+            <div class = column id = Slay></div>
+            <div class = column id = Farm></div>
+            <div class = column id = RC></div>
+            <div class = column id = Hunt></div>
+            <div class = column id = Con></div>
+        </div>
+
+        <div class="legend">
+          <div id = LegAtk >Atk</div>
+          <div id = LegDef>Def</div>
+          <div id = LegStr>Str</div>  
+          <div id = LegHP>HP</div>
+          <div id = LegRng>Rng</div>
+          <div id = LegPray>Pray</div>  
+          <div id = LegMag>Mag</div>  
+          <div id = LegCook>Cook</div>
+          <div id = LegWC>WC</div>
+          <div id = LegFlch>Flch</div>
+          <div id = LegFish>Fish</div>
+          <div id = LegFire>Fire</div>  
+          <div id = LegCrft>Crft</div>
+          <div id = LegSmth>Smth</div>
+          <div id = LegMine>Mine</div>  
+          <div id = LegHerb>Herb</div>  
+          <div id = LegAgil>Agil</div>
+          <div id = LegThv>Thv</div>
+          <div id = LegSlay>Slay</div>
+          <div id = LegFarm>Farm</div>  
+          <div id = LegRC>RC</div>
+          <div id = LegHunt>Hunt</div>
+          <div id = LegCon>Con</div>
+
+        </div>
+
+    </section>
+
+    <hr>
+    <!-- Info contains two numbers pulled from the API -->
+    <section id = info>   
+
+        <h4 id = totalLevel>Total Level: </h4>
+
+        <h4 id = totalXP>Total XP: </h4>
+
+    </section>
+    <script src="js/main.js"></script>
+    <footer>Made by Kyle Weekley</footer>
+</body>
+</html>
